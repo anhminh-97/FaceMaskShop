@@ -1,0 +1,21 @@
+/* Small devices (landscape phones, 576px and up) */
+
+.logoadmin_Sider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+
+@media (max-width: 576px) {
+  .logoImage {
+    text-align: center;
+  }
+  .headerRight {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+}

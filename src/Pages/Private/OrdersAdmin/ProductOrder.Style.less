@@ -1,0 +1,37 @@
+@import "~antd/lib/style/themes/default.less";
+@border-color: #ccc;
+
+.product-order-wrapper {
+  .product-item {
+    padding: @padding-lg 0;
+    border-bottom: 1px solid @border-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    .product-image {
+      img {
+        border: 1px solid @border-color;
+        width: 80px;
+        height: auto;
+        max-width: 100px;
+        min-width: 80px;
+      }
+    }
+    .product-name {
+      font-size: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 20px;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+    .product-price {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .product-color {
+      margin-bottom: @margin-sm;
+    }
+  }
+}

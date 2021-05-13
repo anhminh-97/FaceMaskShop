@@ -1,0 +1,23 @@
+@import '~antd/lib/style/themes/default.less';
+@blue: #0a1fdb;
+
+.order-detail-wrapper {
+  .label {
+    color: @blue;
+  }
+  .star-required {
+    color: red;
+  }
+  .mb-sm{
+      margin-bottom: @margin-sm;
+  }
+  .btn-delete{
+    color: red;
+    padding: 0;
+    border: 0;
+    &:hover {
+      background-color: transparent;
+      color: @blue;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '~antd/lib/style/themes/default.less';
+
+@blue: #0a1fdb;
+
+.header {
+  color: @black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @white;
+  height: 89px;
+  .menu-mobile, .cart-mobile {
+    display: none;
+  }
+}
+
+// tablet
+@media only screen and (max-width: 992px) {
+  .header {
+    height: 70px;
+    .hidden {
+      display: none;
+    }
+    .menu-mobile, .cart-mobile {
+      display: block;
+    }
+  }
+}

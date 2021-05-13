@@ -1,0 +1,19 @@
+@import '~antd/lib/style/themes/default.less';
+
+@blue: #0a1fdb;
+.nav-menu {
+  display: flex;
+  .menu-item {
+    position: relative;
+    .nav-item {
+      margin-right: 30px;
+      color: @black;
+    }
+    .nav-item:hover {
+      color: @blue;
+    }
+    .nav-item.active {
+      color: @blue;
+    }
+  }
+}

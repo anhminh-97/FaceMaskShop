@@ -1,0 +1,46 @@
+@import '~antd/lib/style/themes/default.less';
+
+.mt-lg {
+  margin-top: @margin-lg;
+}
+
+.banner {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-content {
+    font-size: 68px;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .banner {
+    .banner-content {
+      font-size: 48px;
+      left: 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mt-lg{
+    margin-top: 0;
+  }
+  .banner {
+    .banner-content {
+      font-size: 28px;
+      left: 15px;
+    }
+    .btn-shop-now{
+      font-size: 12px;
+      padding: 3px 10px;
+      line-height: 0;
+    }
+  }
+}

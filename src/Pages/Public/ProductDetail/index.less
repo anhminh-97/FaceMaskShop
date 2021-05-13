@@ -1,0 +1,72 @@
+@import "~antd/lib/style/themes/default.less";
+@blue: #0a1fdb;
+.mb-lg {
+  margin-bottom: @margin-lg;
+}
+.mb-sm {
+  margin-bottom: @margin-sm;
+}
+
+.product-wrapper {
+  background-color: @white;
+  margin: 0 auto;
+  padding: 40px 0;
+  .breadcrumb {
+    margin-bottom: 50px;
+  }
+  .product-name {
+    font-size: 24px;
+  }
+  .sku {
+    color: #555555;
+  }
+  .product-price {
+    color: @blue;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+}
+
+.ant-btn {
+  padding: 0;
+  height: 44px;
+  &:hover {
+    background-color: transparent;
+    color: @blue;
+    opacity: 0.7;
+    border: 1px solid @blue;
+  }
+}
+.ant-btn.ant-btn-primary {
+  background-color: @blue;
+  color: white;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.product-info {
+  .info-item {
+    padding: @padding-lg 0;
+    border-bottom: 1px solid @black;
+    &:last-child {
+      border: none;
+    }
+    .info-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+
+      .icon.anticon-plus,
+      .icon.anticon-minus {
+        color: @blue;
+      }
+    }
+    .info-description {
+      margin-top: @margin-sm;
+    }
+  }
+}

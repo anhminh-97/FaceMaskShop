@@ -1,0 +1,37 @@
+@import "~antd/dist/antd.less";
+@blue: #0a1fdb;
+
+.ant-layout-content{
+  background-color: #fff;
+}
+.ant-btn{
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid @blue;
+  padding: 0 40px;
+  color: @blue;
+  cursor: pointer;
+  &:hover {
+    background-color: @blue;
+    color: white;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+a {
+  color: @black;
+  &:hover {
+    color: @blue;
+  }
+}
+.ant-btn-primary{
+  background-color: @blue;
+  color: @white;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,37 @@
+@import '~antd/lib/style/themes/default.less';
+@blue: #0a1fdb;
+@light_pink: rgb(253 248 236);
+@pink: rgb(254 156 122);
+.main {
+  background-color: @white;
+  .text-center {
+    text-align: center;
+  }
+  .title {
+    font-size: 28px;
+    color: @blue;
+    text-align: center;
+    margin: 60px 0;
+  }
+  .most-product {
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .btn.ant-btn {
+    padding: 0 40px;
+    width: auto;
+    &:hover {
+      background-color: @blue;
+      color: white;
+    }
+  }
+}
+
+// Tablet
+@media only screen and (max-width: 992px) {
+  .main {
+    .title {
+      margin: 40px 0;
+    }
+  }
+}

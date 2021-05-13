@@ -1,0 +1,21 @@
+@import "~antd/lib/style/themes/default.less";
+@light_pink: rgb(253 248 236);
+@blue: #0a1fdb;
+
+.headline-wrapper {
+  width: 100%;
+  height: 200px;
+  background-color: @light_pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 68px;
+  color: @blue;
+  margin-bottom: @margin-lg*2;
+}
+@media (max-width: 992px){
+  .headline-wrapper{
+    font-size: 48px;
+    height: 150px;
+  }
+}

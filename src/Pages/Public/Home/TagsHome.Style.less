@@ -1,0 +1,52 @@
+@import '~antd/lib/style/themes/default.less';
+@blue: #0a1fdb;
+@light_pink: rgb(253 248 236);
+@pink: rgb(254 156 122);
+.bg-light-pink {
+  background-color: @light_pink;
+}
+.bg-pink {
+  background-color: @pink;
+}
+.tag {
+  padding: 100px;
+  .tag-item {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.box-overlay,
+.tag-content {
+  display: none;
+}
+.tag-item:hover {
+  .box-overlay {
+    background-color: white;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: 0.2s ease-out;
+  }
+  .tag-content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: @blue;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .tag{
+    padding: 0;
+  }
+}

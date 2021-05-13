@@ -1,0 +1,45 @@
+@import "~antd/lib/style/themes/default.less";
+@border-color: #ccc;
+@blue: #0a1fdb;
+
+.payment-wrapper {
+  background-color: @white;
+  padding: 50px 0;
+  .product-price-total {
+    display: block;
+  }
+  .sub-title {
+    color: @blue;
+    margin-bottom: @margin-lg;
+    border-bottom: 1px solid @border-color;
+    padding-bottom: @padding-sm;
+    font-size: 18px;
+  }
+  .shipping {
+    margin-bottom: @margin-lg;
+    margin-top: @margin-sm;
+    border-bottom: 1px solid @border-color;
+    padding-bottom: @padding-lg;
+  }
+  .total {
+    margin-bottom: @margin-lg;
+    .sub-total {
+      font-size: 20px;
+    }
+    .price-total {
+      text-align: right;
+      font-size: 24px;
+    }
+  }
+  .label {
+    color: @blue;
+    margin-bottom: @margin-sm;
+  }
+  .payment-methods{
+    margin-bottom: @margin-lg;
+  }
+  .btn-payment{
+    height: 44px;
+    width: 100%;
+  }
+}
