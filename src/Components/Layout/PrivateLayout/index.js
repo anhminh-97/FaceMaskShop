@@ -99,28 +99,12 @@ const PrivateLayout = (props) => {
             <Menu.Item key="category">Category</Menu.Item>
             <Menu.Item key="setting">Setting</Menu.Item>
           </SubMenu>
-
-          <SubMenu
-            key="orders"
-            title={
-              <>
-                Orders
-                <Badge size="small" count={count} offset={[10, 0]} />
-              </>
-            }
-            icon={<FormOutlined />}
-          >
-            <Menu.Item key="all-orders">
-              <Link to={ROUTER.AllOrders}>
-                All Orders
-                <Badge size="small" count={count} offset={[10, 0]} />
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="add-order">
-              <Link to={ROUTER.AddOrder}>Add new</Link>
-            </Menu.Item>
-          </SubMenu>
-
+          <Menu.Item key="all-orders">
+            <Link to={ROUTER.AllOrders}>
+              <FormOutlined/>Orders
+              <Badge size="small" count={count} offset={[10, 0]} />
+            </Link>
+          </Menu.Item>
           <SubMenu key="setting" title="Setting" icon={<SettingOutlined />}>
             <Menu.Item key="9">option9</Menu.Item>
             <Menu.Item key="10">option10</Menu.Item>

@@ -7,7 +7,7 @@ import './ProductOrder.Style.less'
 const ProductOrder = ({ data }) => {
   return (
     <div className="product-order-wrapper">
-      {data.products.map((item, index) => {
+      {data?.products?.map((item, index) => {
         return (
           <Row
             justify="space-between"

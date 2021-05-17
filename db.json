@@ -5,7 +5,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.webp",
@@ -19,7 +22,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
@@ -33,7 +39,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.webp",
@@ -47,7 +56,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_46124d58147e46368cb73b4761c936b4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_46124d58147e46368cb73b4761c936b4~mv2.webp",
@@ -63,7 +75,10 @@
       "name": "1122I'm a Product",
       "price": 10.25,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.webp",
@@ -77,7 +92,10 @@
       "name": "2211I'm a Product",
       "price": 26.54,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
@@ -91,7 +109,10 @@
       "name": "I'm a Product",
       "price": 3.87,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.webp",
@@ -105,7 +126,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_46124d58147e46368cb73b4761c936b4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_46124d58147e46368cb73b4761c936b4~mv2.webp",
@@ -119,7 +143,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.webp",
@@ -133,7 +160,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
@@ -147,7 +177,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.webp",
@@ -161,7 +194,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_46124d58147e46368cb73b4761c936b4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_46124d58147e46368cb73b4761c936b4~mv2.webp",
@@ -175,7 +211,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_c63930bf88244b0e8799477c0341f3bc~mv2.webp",
@@ -189,7 +228,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
@@ -203,7 +245,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.webp",
@@ -217,7 +262,10 @@
       "name": "I'm a Product",
       "price": 10,
       "quantity": 1,
-      "color": ["Black", "Gray"],
+      "color": [
+        "Black",
+        "Gray"
+      ],
       "shipping": 5,
       "image": [
         "https://static.wixstatic.com/media/84770f_46124d58147e46368cb73b4761c936b4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_46124d58147e46368cb73b4761c936b4~mv2.webp",
@@ -231,11 +279,12 @@
       "price": 5454,
       "quantity": 3,
       "name": "Xoài",
-      "color": ["Yellow"],
+      "color": [
+        "Yellow"
+      ],
       "id": 13
     }
   ],
-  "cart": [],
   "order": [
     {
       "products": [
@@ -276,46 +325,6 @@
       "status": "Processing",
       "create_at": 1618738918836,
       "id": 2
-    },
-    {
-      "products": [
-        {
-          "id": 2,
-          "name": "2211I'm a Product",
-          "price": 26.54,
-          "quantity": 4,
-          "color": "Black",
-          "shipping": 5,
-          "image": [
-            "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
-            "https://static.wixstatic.com/media/84770f_42c9ab98392d4c0d8db0aca2bb4df529~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_42c9ab98392d4c0d8db0aca2bb4df529~mv2.webp",
-            "https://static.wixstatic.com/media/84770f_e24baab83d344b49b7b36c5788f9b89b~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_e24baab83d344b49b7b36c5788f9b89b~mv2.webp"
-          ],
-          "description": "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions."
-        }
-      ],
-      "user": {
-        "confirmPassword": "123456",
-        "password": "123456",
-        "email": "abc@gmail.com",
-        "phoneNumber": 123456789,
-        "lastName": "Tran",
-        "firstName": "Anh Minh",
-        "id": 1
-      },
-      "reciver": {
-        "firstName": "Anh Minh",
-        "lastName": "Tran",
-        "email": "abc@gmail.com",
-        "phoneNumber": 123456789,
-        "address": "1/8A ấp Vạn Hạnh, xã Trung Chánh, huyện Hóc Môn, TP.HCM",
-        "message": ""
-      },
-      "payment": "momo",
-      "total": "106.16",
-      "status": "Processing",
-      "create_at": 1618739152588,
-      "id": 3
     },
     {
       "products": [
@@ -594,6 +603,61 @@
       "create_at": 1618844204857,
       "code": 1618844204857,
       "id": 10
+    },
+    {
+      "products": [
+        {
+          "id": 4,
+          "name": "I'm a Product",
+          "price": 10,
+          "quantity": 1,
+          "color": "Black",
+          "shipping": 5,
+          "image": [
+            "https://static.wixstatic.com/media/84770f_46124d58147e46368cb73b4761c936b4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_46124d58147e46368cb73b4761c936b4~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_971a52319ced40d6becd8c7e858a01e4~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_971a52319ced40d6becd8c7e858a01e4~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_96be5e3c9bbd4ad8b10decf2d1aa80b7~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_96be5e3c9bbd4ad8b10decf2d1aa80b7~mv2.webp"
+          ],
+          "description": "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions."
+        },
+        {
+          "id": 2,
+          "name": "2211I'm a Product",
+          "price": 26.54,
+          "quantity": 1,
+          "color": "Gray",
+          "shipping": 5,
+          "image": [
+            "https://static.wixstatic.com/media/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_28edc5e19bc2497189eb88785717f1e0~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_42c9ab98392d4c0d8db0aca2bb4df529~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_42c9ab98392d4c0d8db0aca2bb4df529~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_e24baab83d344b49b7b36c5788f9b89b~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_e24baab83d344b49b7b36c5788f9b89b~mv2.webp"
+          ],
+          "description": "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions."
+        }
+      ],
+      "user": {
+        "confirmPassword": "123456",
+        "password": "123456",
+        "email": "abc@gmail.com",
+        "phoneNumber": 123456789,
+        "lastName": "Tran",
+        "firstName": "Anh Minh",
+        "id": 1
+      },
+      "reciver": {
+        "firstName": "Anh Minh",
+        "lastName": "Tran",
+        "email": "abc@gmail.com",
+        "phoneNumber": 123456789,
+        "address": "1/8A ấp Vạn Hạnh, xã Trung Chánh, huyện Hóc Môn, TP.HCM",
+        "message": ""
+      },
+      "payment": "delivery",
+      "total": "36.54",
+      "status": "Processing",
+      "create_at": 1621152487276,
+      "code": 1621152487276,
+      "id": 11
     }
   ],
   "userProfile": [

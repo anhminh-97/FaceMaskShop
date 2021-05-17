@@ -1,4 +1,4 @@
-import { action, computed, thunk } from 'easy-peasy'
+import { action, computed, thunk, thunkOn } from 'easy-peasy'
 import { getOrder, getOrderId, removeOrder, updateOrder } from 'Services/order'
 
 const orderAdmin = {
@@ -7,9 +7,13 @@ const orderAdmin = {
   page: 1,
   count: computed((state) => state.orders.length),
   loading: false,
+  loadingOrderDetail: false,
 
   setLoading: action((state, payload) => {
     state.loading = payload
+  }),
+  setLoadingOrderDetail: action((state, payload) => {
+    state.loadingOrderDetail = payload
   }),
   setOrder: action((state, payload) => {
     state.orders = payload
@@ -17,7 +21,7 @@ const orderAdmin = {
   }),
   setOrderDetail: action((state, payload) => {
     state.orderDetail = payload
-    state.loading = false
+    state.loadingOrderDetail = false
   }),
   setPage: action((state, payload) => {
     state.page = payload
@@ -34,14 +38,12 @@ const orderAdmin = {
     }
   }),
   getOrderDetail: thunk(async (actions, id) => {
-    actions.setLoading(true)
+    actions.setLoadingOrderDetail(true)
     try {
       const { data } = await getOrderId(id)
       actions.setOrderDetail(data)
-      actions.setLoading(false)
     } catch (error) {
       actions.setOrderDetail({})
-      actions.setLoading(false)
     }
   }),
   deleteOrder: thunk(async (actions, { id, fnCallback }) => {
@@ -60,11 +62,12 @@ const orderAdmin = {
       }
     }
   }),
-  editOrder: thunk(async (actions, { payload, fnCallback }) => {
+  editOrder: thunk(async (actions, { data, fnCallback }) => {
     actions.setLoading(true)
     try {
-      await updateOrder(payload.id, payload)
+      await updateOrder(data.id, data)
       await actions.getAllOrders()
+
       actions.setLoading(false)
       if (fnCallback) {
         fnCallback(true)
@@ -76,5 +79,18 @@ const orderAdmin = {
       }
     }
   }),
+  getOrderPage: thunkOn(
+    (actions) => [actions.setPage],
+    async (actions, payload, { getState }) => {
+      actions.setLoading(true)
+      const page = getState().page
+      try {
+        const { data } = await getOrder(page)
+        actions.getAllOrders(data)
+      } catch (error) {
+        actions.getAllOrders([])
+      }
+    }
+  ),
 }
 export default orderAdmin

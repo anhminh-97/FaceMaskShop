@@ -10,12 +10,16 @@ const AllOrders = () => {
   // State
   const orders = useStoreState((state) => state.orderAdmin.orders)
   const loading = useStoreState((state) => state.orderAdmin.loading)
+  const page = useStoreState((state) => state.orderAdmin.page)
   const getOrderDetail = useStoreActions(
     (action) => action.orderAdmin.getOrderDetail
   )
   // Function
   const onHanleId = (id) => {
     getOrderDetail(id)
+  }
+  const handlePagination = (pagination) => {
+    console.log('pagination :>> ', pagination);
   }
   // data table
   const columns = [
@@ -69,30 +73,14 @@ const AllOrders = () => {
       key: 'payment',
     },
   ]
-  const rowSelection = {
-    onChange: (selectedRowKeys, selectedRows) => {
-      console.log(
-        `selectedRowKeys: ${selectedRowKeys}`,
-        'selectedRows: ',
-        selectedRows
-      )
-    },
-    onSelect: (record, selected, selectedRows) => {
-      console.log(record, selected, selectedRows)
-    },
-    onSelectAll: (selected, selectedRows, changeRows) => {
-      console.log(selected, selectedRows, changeRows)
-    },
-  }
   return (
     <>
       <h1 style={{ fontSize: '32px' }}>ALL ORDERS</h1>
       <Table
         dataSource={orders}
-        rowSelection={rowSelection}
         columns={columns}
         loading={loading}
-        // pagination={page}
+        onChange={handlePagination}
       />
     </>
   )

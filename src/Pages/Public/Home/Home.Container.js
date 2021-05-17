@@ -1,5 +1,5 @@
-
 import { Spin } from 'Components/UI-Library'
+import React from 'react'
 import { LoadingOutlined } from 'Components/UI-Library/Icons'
 
 import { HomeBanner } from './HomeBanner.Component'

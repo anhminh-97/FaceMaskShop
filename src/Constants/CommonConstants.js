@@ -39,7 +39,6 @@ export const ROUTER = {
   AllProducts: '/all-products',
   Dashboard: '/dashboard',
   AllOrders: '/all-orders',
-  AddOrder: '/add-order',
   OrderDetail: '/order-detail',
 }
 
