@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useForm } from 'react-hook-form'
@@ -12,6 +12,8 @@ import './LoginForm.Style.less'
 
 const LoginForm = () => {
   const history = useHistory()
+  const location = useLocation()
+  const redirect = location.search ? location.search.split('=')[1] : '/'
   const getLogin = useStoreActions((action) => action.auth.getLogin)
   const user = useStoreState((state) => state.auth.user)
 
@@ -25,13 +27,12 @@ const LoginForm = () => {
     },
     resolver: yupResolver(schema),
   }
-
   const form = useForm(defaultValues)
 
   const fnCallback = (success) => {
     if (success) {
       message.success('Logged in successfully')
-      history.push(ROUTER.Home)
+      history.push(redirect ? `${redirect}` : ROUTER.Home)
     } else {
       message.error('Login failed')
     }
@@ -59,7 +60,16 @@ const LoginForm = () => {
         <Button block type="primary" htmlType="submit" className="btn-login">
           Log In
         </Button>
-        Do you have an account? <Link to={ROUTER.Register}>Register now</Link>
+        Do you have an account?{' '}
+        <Link
+          to={
+            redirect
+              ? `${ROUTER.Register}?redirect=${redirect}`
+              : ROUTER.Register
+          }
+        >
+          Register now
+        </Link>
       </form>
     </Col>
   )

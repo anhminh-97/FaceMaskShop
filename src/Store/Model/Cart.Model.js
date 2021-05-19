@@ -5,9 +5,11 @@ import HmacSHA256 from 'crypto-js/hmac-sha256'
 import CryptoJS from 'crypto-js'
 import { postOrder } from 'Services/order'
 import Axios from 'axios'
+import { updateUser, deleteCart } from 'Services/auth'
 
 const cart = {
   cart: [],
+  loading: false,
   count: computed((state) => state.cart.length),
   subTotal: computed((state) => {
     const data = state.cart
@@ -18,6 +20,13 @@ const cart = {
   total: computed((state) => {
     return state.subTotal
   }),
+  setLoading: action((state, payload) => {
+    state.loading = payload
+  }),
+  setCart: action((state, payload) => {
+    state.cart = payload
+    state.loading = false
+  }),
   // getCart: action((state) => {
   //   state.cart = [
   //     ...state.cart,
@@ -25,53 +34,56 @@ const cart = {
   //   ]
   //   console.log('state.cart :>> ', state.cart)
   // }),
-  setCart: action((state, payload) => {
-    const data = state.cart
-    for (let i = 0; i < state.cart.length; i += 1) {
-      if (
-        payload.id === state.cart[i].id &&
-        payload.color === state.cart[i].color
-      ) {
-        let count = _get(data, `[${i}].quantity`, 0)
-        count += payload.quantity
-        const dataAddQuantity = _set(state.cart, `[${i}].quantity`, count)
-        state.cart = dataAddQuantity
-        localStorage.setItem('cartItem', JSON.stringify(payload))
-        return
+  addCart: thunk(async (actions, payload, { getState }) => {
+    const data = getState().cart
+    actions.setLoading(true)
+    try {
+      for (let i = 0; i < data.length; i += 1) {
+        if (payload.id === data[i].id && payload.color === data[i].color) {
+          let count = _get(data, `[${i}].quantity`, 0)
+          count += payload.quantity
+          const dataAddQuantity = _set(data, `[${i}].quantity`, count)
+          // getState().cart = dataAddQuantity
+          actions.setCart(dataAddQuantity)
+          // localStorage.setItem('cartItem', JSON.stringify(payload))
+          return
+        }
       }
+      getState().cart = [...data, payload]
+      // console.log('payload :>> ', payload);
+      await updateUser(payload, payload.id)
+      // localStorage.setItem('cartItem', JSON.stringify(payload))
+    } catch (error) {
+      actions.setCart([])
     }
-    state.cart = [...data, payload]
-    localStorage.setItem('cartItem', JSON.stringify(payload))
   }),
-  setAddQuantity: action((state, payload) => {
-    const data = state.cart
-    for (let i = 0; i < state.cart.length; i += 1) {
-      if (
-        payload.id === state.cart[i].id &&
-        payload.color === state.cart[i].color
-      ) {
+  setAddQuantity: thunk(async (actions, payload, { getState }) => {
+    const data = getState().cart
+    for (let i = 0; i < data.length; i += 1) {
+      if (payload.id === data[i].id && payload.color === data[i].color) {
         let count = _get(data, `[${i}].quantity`, 0)
         // if (state.cart[i].quantity < payload.quantity) {
-        if (payload.quantity > state.cart[i].quantity) {
-          const quantity = payload.quantity - state.cart[i].quantity
+        if (payload.quantity > data[i].quantity) {
+          const quantity = payload.quantity - data[i].quantity
           count += quantity
         } else {
-          const quantity = state.cart[i].quantity - payload.quantity
+          const quantity = data[i].quantity - payload.quantity
           count -= quantity
         }
-        const dataAddQuantity = _set(state.cart, `[${i}].quantity`, count)
-        state.cart = dataAddQuantity
-        localStorage.setItem('cartItem', JSON.stringify(payload))
+        const dataAddQuantity = _set(data, `[${i}].quantity`, count)
+        actions.setCart(dataAddQuantity)
+        // localStorage.setItem('cartItem', JSON.stringify(payload))
         return
       }
     }
-    state.cart = [...data, payload]
-    localStorage.setItem('cartItem', JSON.stringify(payload))
+    getState().cart = [...data, payload]
+    await updateUser(payload, payload.userId)
+    // localStorage.setItem('cartItem', JSON.stringify(payload))
   }),
-  setRemoveProduct: action((state, payload) => {
-    console.log('payload', payload)
-    state.cart = state.cart.filter((item) => item.id !== payload.id)
-    localStorage.removeItem('cartItem')
+  removeProduct: thunk(async (actions, id) => {
+    await deleteCart(id)
+    // state.cart = state.cart.filter((item) => item.id !== payload.id)
+    // localStorage.removeItem('cartItem')
   }),
   checkoutCart: thunk(
     async (

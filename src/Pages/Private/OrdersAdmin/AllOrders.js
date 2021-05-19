@@ -10,7 +10,7 @@ const AllOrders = () => {
   // State
   const orders = useStoreState((state) => state.orderAdmin.orders)
   const loading = useStoreState((state) => state.orderAdmin.loading)
-  const page = useStoreState((state) => state.orderAdmin.page)
+  // const page = useStoreState((state) => state.orderAdmin.page)
   const getOrderDetail = useStoreActions(
     (action) => action.orderAdmin.getOrderDetail
   )
@@ -19,7 +19,7 @@ const AllOrders = () => {
     getOrderDetail(id)
   }
   const handlePagination = (pagination) => {
-    console.log('pagination :>> ', pagination);
+    console.log('pagination :>> ', pagination)
   }
   // data table
   const columns = [

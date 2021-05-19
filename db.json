@@ -669,7 +669,22 @@
       "lastName": "Tran",
       "firstName": "Anh Minh",
       "id": 1,
-      "cart": []
+      "cart": [
+        {
+          "id": 3,
+          "name": "I'm a Product",
+          "price": 3.87,
+          "quantity": 1,
+          "color": "Gray",
+          "shipping": 5,
+          "image": [
+            "https://static.wixstatic.com/media/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_4f3970a052ef4bc3914f116a8160b7f2~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_ec4189bb9cfa41d7a0a2e7a3a9a2897e~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_ec4189bb9cfa41d7a0a2e7a3a9a2897e~mv2.webp",
+            "https://static.wixstatic.com/media/84770f_32b5174906e746039427179b9e077cae~mv2.jpg/v1/fill/w_625,h_834,al_c,q_85,usm_0.66_1.00_0.01/84770f_32b5174906e746039427179b9e077cae~mv2.webp"
+          ],
+          "description": "I'm a product description. I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions."
+        }
+      ]
     },
     {
       "confirmPassword": "123456",
@@ -690,6 +705,15 @@
       "firstName": "Anh Minh",
       "id": 3,
       "cart": []
+    },
+    {
+      "confirmPassword": "123456",
+      "password": "123456",
+      "email": "bcd@gmail.com",
+      "phoneNumber": 123456789165165,
+      "lastName": "Tran",
+      "firstName": "Anh Minh",
+      "id": 4
     }
   ]
 }

@@ -9,15 +9,15 @@ import './index.less'
 const ProductCart = ({ total, removeIcon }) => {
   const cart = useStoreState((state) => state.cart.cart)
   const setAddQuantity = useStoreActions((action) => action.cart.setAddQuantity)
-  const setRemoveProduct = useStoreActions(
-    (action) => action.cart.setRemoveProduct
+  const removeProduct = useStoreActions(
+    (action) => action.cart.removeProduct
   )
 
   const onChange = (value, item) => {
     setAddQuantity({ ...item, quantity: value })
   }
-  const handleRemoveCart = (payload) => {
-    setRemoveProduct(payload)
+  const handleRemoveCart = (id) => {
+    removeProduct(id)
   }
 
   return (
@@ -67,7 +67,7 @@ const ProductCart = ({ total, removeIcon }) => {
                     <Col span={12}>
                       <Button
                         className="btn-remove"
-                        onClick={() => handleRemoveCart(item)}
+                        onClick={() => handleRemoveCart(item.id)}
                       >
                         <CloseOutlined />
                       </Button>

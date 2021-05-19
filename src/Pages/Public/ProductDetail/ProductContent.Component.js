@@ -5,6 +5,7 @@ import {
   Collapse,
   InputNumber,
   message,
+  Modal,
   Radio,
   Row,
 } from 'Components/UI-Library'
@@ -13,23 +14,29 @@ import {
   MinusOutlined,
   PlusOutlined,
 } from 'Components/UI-Library/Icons'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { ROUTER } from 'Constants/CommonConstants'
+import isEmpty from 'lodash/isEmpty'
 
 const { Panel } = Collapse
 
 const ProductContent = () => {
   const history = useHistory()
+  const location = useLocation()
+  const redirect = location.search ? location.search.split('=')[1] : '/'
   // Store
-  const setCart = useStoreActions((actions) => actions.cart.setCart)
+  const addCart = useStoreActions((actions) => actions.cart.addCart)
   const productDetail = useStoreState((state) => state.products.productDetail)
+  const user = useStoreState((state) => state.auth.user)
 
   // state
   const [variant, setVariant] = useState({
     color: null,
     quantity: 1,
   })
+  const [visible, setVisible] = useState(false)
+  const [confirmLoading, setConfirmLoading] = useState(false)
 
   const onHandleColor = (e) => {
     setVariant((prev) => ({ ...prev, color: e.target.value }))
@@ -41,17 +48,32 @@ const ProductContent = () => {
   const onHandleAdd = (payload) => {
     if (!variant.color) {
       message.error('Please choose color of product')
+    } else if (isEmpty(user)) {
+      setVisible(true)
     } else {
-      setCart({ ...payload, ...variant })
+      const data = { ...payload, ...variant }
+      addCart({ ...user, cart: [data] })
     }
   }
   const onHandleBuyNow = (payload) => {
     if (!variant.color) {
       message.error('Please choose color of product')
     } else {
-      setCart({ ...payload, ...variant })
+      addCart({ ...payload, ...variant })
       history.push(ROUTER.Checkout)
     }
+  }
+
+  const handleOk = () => {
+    setConfirmLoading(true)
+    history.push(
+      redirect
+        ? `${ROUTER.Login}?redirect=${redirect}product-detail/${productDetail.id}`
+        : ROUTER.Login
+    )
+  }
+  const handleCancel = () => {
+    setVisible(false)
   }
 
   return (
@@ -98,10 +120,40 @@ const ProductContent = () => {
         </Row>
       </div>
       <div className="mb-sm">
-        <Button block type="primary" onClick={() => onHandleBuyNow(productDetail)}>
+        <Button
+          block
+          type="primary"
+          onClick={() => onHandleBuyNow(productDetail)}
+        >
           Buy Now
         </Button>
       </div>
+      <Modal
+        title="LOGIN"
+        visible={visible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        confirmLoading={confirmLoading}
+        footer={[
+          <Button
+            style={{ padding: '5px 20px', height: 'auto' }}
+            key="cancel"
+            onClick={handleCancel}
+          >
+            Cancel
+          </Button>,
+          <Button
+            style={{ padding: '5px 20px', height: 'auto' }}
+            key="login"
+            type="primary"
+            onClick={handleOk}
+          >
+            Login
+          </Button>,
+        ]}
+      >
+        Please login before adding to cart
+      </Modal>
       <Collapse
         ghost
         expandIconPosition="right"

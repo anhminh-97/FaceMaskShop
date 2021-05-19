@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import isEmpty from 'lodash/isEmpty'
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useTranslation } from 'react-i18next'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory, useLocation } from 'react-router-dom'
 
 import {
   MenuFoldOutlined,
@@ -36,6 +36,8 @@ const { Header, Sider, Content } = Layout
 const PrivateLayout = (props) => {
   const { t } = useTranslation(['Dashboard'])
   const history = useHistory()
+  const location = useLocation()
+  const redirect = location.search ? location.search.split('=')[1] : '/'
 
   // Redux
   const count = useStoreState((state) => state.orderAdmin.count)
@@ -44,9 +46,13 @@ const PrivateLayout = (props) => {
 
   useEffect(() => {
     if (isEmpty(user)) {
-      history.push(ROUTER.Login)
+      history.push(
+        redirect
+          ? `${ROUTER.Login}?redirect=${redirect}dashboard`
+          : ROUTER.Login
+      )
     }
-  }, [history, user])
+  }, [redirect, history, user])
 
   // State
   const [collapsed, setCollapsed] = useState(false)
@@ -101,7 +107,8 @@ const PrivateLayout = (props) => {
           </SubMenu>
           <Menu.Item key="all-orders">
             <Link to={ROUTER.AllOrders}>
-              <FormOutlined/>Orders
+              <FormOutlined />
+              Orders
               <Badge size="small" count={count} offset={[10, 0]} />
             </Link>
           </Menu.Item>
